@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Yarrums Graphs</title>
+        <link href='https://fonts.googleapis.com/css?family=Fira Sans' rel='stylesheet'>
+        <link rel="stylesheet" href="style/main.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../../p5.js"></script>
+        <script type="text/javascript" src="scripts/edge.js"></script>
+        <script type="text/javascript" src="scripts/vertex.js"></script>
+        <script type="text/javascript" src="scripts/double_click.js"></script>
+        <script type="text/javascript" src="scripts/input_events.js"></script>
+        <script type="text/javascript" src="scripts/ui.js"></script>
+        <script type="text/javascript" src="scripts/main.js"></script>
+    </head>
+    <body>
+        <div id="menu_container">
+            <div id="wrapper">
+                <!-- modify edges and vertices -->
+                <div id="modify_e" class="">
+                    <div id="title">
+                        <p>Add or Remove Edges</p>
+                        <span>↓</span>
+                    </div>
+                    <input id="e_add" type="button" value="Add">
+                    <input id="e_remove" type="button" value="Remove">
+                </div>
+                <!-- add vertices -->
+                <div id="add_v">
+                    <p>Add Vertex</p>
+                    <span>+</span>
+                </div>
+            </div>
+            <!--vertex info-->
+            <div id="vertex_info">
+                <div class="sep"></div>
+                <h1 id="v_pos">x: -200.233, y: 234.234</h1>
+                <input id="v_label" type="text" placeholder="Label" maxlength="5" title="Label">
+                <input id="v_radius" type="number" placeholder="Radius" min=10 max=40 title="Radius" step="0.5">
+                <div id="colour">
+                    <div>
+                        <input type="color" id="c_picker">
+                        <div id="c_square"></div>
+                    </div>
+                    <input type="text" id="c_picker_label" readonly="readonly">
+                </div>
+                <input type="button" value="Remove" id="remove_vertex">
+            </div>
+        </div>
+    </body>
+</html>
