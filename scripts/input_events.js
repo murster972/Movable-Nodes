@@ -30,7 +30,7 @@ function mouseDragged(){
         vertex_set.new_pos.end = createVector(mouseX, mouseY);
 
         var r = sqrt(sq(vertex_set.new_pos.start.x - mouseX) + sq(vertex_set.new_pos.start.y - mouseY));
-        vertex_set.new_radius = r > 10 ? r : 10;
+        vertex_set.new_radius = r > vertex_set.min_radius ? r : vertex_set.min_radius;
     }
 }
 

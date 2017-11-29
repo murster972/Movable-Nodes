@@ -29,6 +29,8 @@ function EdgeSet(){
             else this.removeEdge(this.selected[i - 1], this.selected[i]);
         }
 
+        this.selected[0].highlight();
+
         this.selected = [];
     }
 
@@ -44,6 +46,7 @@ function EdgeSet(){
     }
 
     this.removeEdge = function(v1, v2){
+        //BUG: not working!!!!!
         var index = this.findEdge(v1, v2);
 
         if(index == -1) return -1;

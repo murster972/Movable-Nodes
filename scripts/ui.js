@@ -1,5 +1,5 @@
 var changed_current_vertex = 0;
-var current_vertex;
+var current_vertex = {highlighted: "", label: "", hex: "", radius: ""};
 
 $(document).ready(function(){
     $("#add_v").on("click", function(){
@@ -51,6 +51,19 @@ $(document).ready(function(){
 
     $("#remove_vertex").on("click", function(){
         vertex_set.removeVertex(current_vertex);
+    })
+
+    $("#v_label").on("change", function(){
+        current_vertex.label = $("#v_label").val();
+    })
+
+    $(".help_ico").on("click", function(){
+        if(this.id == "help_e"){
+            msg = "double click vertices in the order you wish the edge to follow, e.g. edge from 1-3 you'd double click vertex 1 then 3."
+        } else{
+            msg = "Double click canvas to add new vertices. On the second click, before release, the radius can be adjusted by moving the mouse."
+        }
+        alert(msg);
     })
 })
 
