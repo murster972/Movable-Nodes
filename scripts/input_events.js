@@ -20,6 +20,10 @@ function mousePressed(){
     }
 }
 
+function mouseMoved(){
+    cursor(clicked_vertex(mouseX, mouseY) ? HAND : ARROW);
+}
+
 function mouseDragged(){
     if(mouseX < 0) return 0;
 
