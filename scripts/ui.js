@@ -59,7 +59,10 @@ $(document).ready(function(){
 
     $(".help_ico").on("click", function(){
         if(this.id == "help_e"){
-            msg = "double click vertices in the order you wish the edge to follow, e.g. edge from 1-3 you'd double click vertex 1 then 3."
+            msg = "double click vertices in the order you wish the edge to follow, e.g. edge from 1-3 you'd\
+                   double click vertex 1 then 3. Mutiple edges between the sa,e vertices, including loops\
+                   are indicated by text above, or in, the edge, e.g. x3 if an edge occurs three times between two\
+                   vertices."
         } else{
             msg = "Double click canvas to add new vertices. On the second click, before release, the radius can be adjusted by moving the mouse."
         }

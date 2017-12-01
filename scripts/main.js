@@ -7,9 +7,6 @@ function setup(){
 
     edge_set = new EdgeSet();
     vertex_set = new VertexSet();
-
-    vertex_set.addVertex(random(width), random(height));
-    vertex_set.addVertex(random(width), random(height));
 }
 
 function draw(){

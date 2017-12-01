@@ -65,9 +65,6 @@ function Vertex(x, y, radius, min_r){
         strokeWeight(1);
         ellipse(this.pos.x, this.pos.y, d - d / 5);
 
-        //show vertex label
-        //TODO: ADD VERTEX LABEL
-
         //font colour set to opposit of bg to ensure it always show
         var fg = this.hex ? inverseHex(this.hex) : "#000000";
         noStroke();

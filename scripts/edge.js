@@ -95,38 +95,27 @@ function Edge(v1, v2){
     }
 
     this.draw_loop = function(){
-        for(var i = 0, r = 60; i < this.times; i++, r += 20){
-            // x: -r left, +r right
-            // y: -r top, +r bottom
-            ellipse(this.pos1.x - r / 2.5, this.pos1.y - r / 2.5, r);
+        var r = this.v1.radius * 3;
+        ellipse(this.pos1.x - r / 3, this.pos1.y - r / 3, r);
+
+        if(this.times > 1){
+            textSize(15);
+            fill(255);
+            stroke(0);
+            text("x" + this.times, this.pos1.x - r / 2.5, this.pos1.y - r / 2.5);
         }
     }
 
     this.draw_edge = function(){
         mid = createVector((this.pos1.x + this.pos2.x) / 2, (this.pos1.y + this.pos2.y) / 2);
-        mid1 = createVector((mid.x + this.pos1.x) / 2, (mid.y + this.pos1.y) / 2);
-        mid2 = createVector((mid.x + this.pos2.x) / 2, (mid.y + this.pos2.y) / 2);
 
-        // for(var i = 0, angle = ; i < this.times; i++){
-        //
-        // }
-
-        //TODO: figure out best way to do multiple edges between same vertices
         line(this.pos1.x, this.pos1.y, this.pos2.x, this.pos2.y);
 
-        // curveTightness(-.1)
-        //
-        // beginShape();
-        // curveVertex(this.pos1.x, this.pos1.y);
-        // curveVertex(this.pos1.x, this.pos1.y);
-        //
-        // curveVertex(mid1.x, mid1.y - 20);
-        // curveVertex(mid2.x, mid2.y - 20);
-        //
-        // curveVertex(this.pos2.x, this.pos2.y);
-        // curveVertex(this.pos2.x, this.pos2.y);
-        // endShape();
-
-
+        if(this.times > 1){
+            textSize(15);
+            fill(255);
+            stroke(0);
+            text("x" + this.times, mid.x, mid.y);
+        }
     }
 }
